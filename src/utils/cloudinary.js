@@ -13,7 +13,7 @@ const uploadOnCloudinary = async (localStorage) => {
         if(!localStorage) return null;
 
         const response = await cloudinary.uploader.upload(localStorage, {
-        resource_type: "auto"
+            resource_type: "auto"
         });
 
         console.log("File uplaoded on cloudinary!", response.url);
