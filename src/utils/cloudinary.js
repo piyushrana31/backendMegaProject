@@ -19,7 +19,7 @@ const uploadOnCloudinary = async (localStorage) => {
         console.log("File uplaoded on cloudinary!", response.url);
         return response;
     } catch(error) {
-        fs.unlink(localStorage); // remove the locally saved temporary file as the upload operation got failed.
+        fs.unlinkSync(localStorage); // remove the locally saved temporary file as the upload operation got failed.
         
         return null;
     }
